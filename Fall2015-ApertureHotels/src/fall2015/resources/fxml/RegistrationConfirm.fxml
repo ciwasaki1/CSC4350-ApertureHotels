@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="602.0" prefWidth="469.0" style="-fx-background-color: rgba(33,33, 33);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fall2015.aperturehotels.RegistrationConfirmController">
+   <children>
+      <Label layoutX="74.0" layoutY="43.0" prefHeight="62.0" prefWidth="321.0" style="-fx-text-fill: white;" text="Thank you for Registering!">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn1" layoutX="198.0" layoutY="439.0" mnemonicParsing="false" onAction="#BackToRegistration" prefHeight="37.0" prefWidth="74.0" style="-fx-background-color: rgba(48, 132, 217); -fx-text-fill: white;" text="Finish" />
+      <ImageView fitHeight="218.0" fitWidth="219.0" layoutX="126.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Portal_Cake_icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="106.0" layoutY="105.0" prefHeight="37.0" prefWidth="265.0" style="-fx-text-fill: white;" text="Proceed to the Front Desk for Room Assignment." />
+   </children>
+</AnchorPane>

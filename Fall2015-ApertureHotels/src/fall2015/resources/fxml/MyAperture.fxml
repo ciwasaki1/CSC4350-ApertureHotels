@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fall2015.aperturehotels.MyApertureController">
+   <children>
+      <BorderPane prefHeight="455.0" prefWidth="438.0">
+         <top>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: rgba(33,33, 33);" BorderPane.alignment="CENTER">
+               <items>
+                  <Region prefHeight="30.0" prefWidth="212.0" />
+               </items>
+            </ToolBar>
+         </top>
+         <center>
+            <AnchorPane prefHeight="415.0" prefWidth="454.0" style="-fx-background-color: rgba(33,33, 33);" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="clock_btn" layoutX="110.0" layoutY="89.0" mnemonicParsing="false" onAction="#OpenClockIn" prefHeight="20.0" prefWidth="222.0" style="-fx-background-color: rgba(48, 132, 217); -fx-text-fill: white;" text="Clock In">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="pinfo_btn" layoutX="110.0" layoutY="140.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="222.0" style="-fx-background-color: rgba(48, 132, 217); -fx-text-fill: white;" text="Personal Info">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="timeoff_btn" layoutX="110.0" layoutY="297.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="222.0" style="-fx-background-color: rgba(48, 132, 217); -fx-text-fill: white;" text="Request Time Off">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="feedback_btn" layoutX="110.0" layoutY="193.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="222.0" style="-fx-background-color: rgba(48, 132, 217); -fx-text-fill: white;" text="Complaints/Feedback">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="119.0" layoutY="14.0" prefHeight="62.0" prefWidth="201.0" style="-fx-text-fill: white;" text="MyAperture">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="hyperback" layoutX="55.0" layoutY="345.0" onAction="#BackToHomepage" style="-fx-text-fill: rgba(48, 132, 217);" text="Back" />
+                  <Button fx:id="team_btn" layoutX="110.0" layoutY="246.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="222.0" style="-fx-background-color: rgba(48, 132, 217); -fx-text-fill: white;" text="Team Members">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

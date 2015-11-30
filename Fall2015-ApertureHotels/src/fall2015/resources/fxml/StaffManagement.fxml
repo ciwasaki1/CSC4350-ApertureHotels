@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="789.0" prefWidth="1090.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fall2015.aperturehotels.StaffManagementController">
+   <children>
+      <BorderPane prefHeight="789.0" prefWidth="1090.0">
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                  <Tab text="Services">
+                     <content>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <bottom>
+                              <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                           </bottom>
+                           <center>
+                              <TableView fx:id="s_table" prefHeight="680.0" prefWidth="819.0" BorderPane.alignment="CENTER">
+                                 <columns>
+                                    <TableColumn fx:id="s_id_col" prefWidth="43.0" text="ID" />
+                                    <TableColumn fx:id="s_name_col" prefWidth="183.0" text="Service Name" />
+                                    <TableColumn fx:id="s_des_col" prefWidth="479.0" text="Service Description" />
+                                    <TableColumn fx:id="s_exp_col" prefWidth="89.0" text="Expense" />
+                                 </columns>
+                              </TableView>
+                           </center>
+                           <right>
+                              <BorderPane prefHeight="680.0" prefWidth="295.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <TabPane prefHeight="315.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                       <tabs>
+                                          <Tab text="Add New">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="277.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TextField fx:id="s_addname" layoutX="56.0" layoutY="97.0" prefHeight="25.0" prefWidth="199.0" promptText="Service Name" />
+                                                      <Label layoutX="130.0" layoutY="26.0" prefHeight="35.0" prefWidth="47.0" text="Add">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="s_addexp" layoutX="56.0" layoutY="373.0" prefHeight="25.0" prefWidth="200.0" promptText="Expense" />
+                                                      <TextArea fx:id="s_adddes" layoutX="56.0" layoutY="144.0" prefHeight="200.0" prefWidth="200.0" promptText="Add Description" />
+                                                      <Button fx:id="s_addcreate" layoutX="58.0" layoutY="432.0" mnemonicParsing="false" onAction="#CreateService" prefHeight="25.0" prefWidth="193.0" text="Create" />
+                                                   </children></AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Delete Service">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TextField fx:id="s_delid" layoutX="73.0" layoutY="132.0" promptText="ID" />
+                                                      <Label layoutX="109.0" layoutY="44.0" prefHeight="41.0" prefWidth="78.0" text="Delete">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button fx:id="s_delbtn" layoutX="122.0" layoutY="208.0" mnemonicParsing="false" onAction="#DeleteService" text="Delete" />
+                                                   </children></AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Modify">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ComboBox fx:id="s_modatt" layoutX="73.0" layoutY="156.0" prefHeight="25.0" prefWidth="180.0" />
+                                                      <Label layoutX="114.0" layoutY="37.0" prefHeight="41.0" prefWidth="78.0" text="Modify">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="s_modid" layoutX="74.0" layoutY="114.0" prefHeight="25.0" prefWidth="177.0" promptText="Enter ID" />
+                                                      <TextArea fx:id="s_modchanges" layoutX="74.0" layoutY="202.0" prefHeight="97.0" prefWidth="182.0" promptText="Enter Changes" />
+                                                      <Button fx:id="s_modbtn" layoutX="201.0" layoutY="332.0" mnemonicParsing="false" onAction="#UpdateService" text="Modify" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                       </tabs>
+                                    </TabPane>
+                                 </center>
+                              </BorderPane>
+                           </right>
+                        </BorderPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Employee">
+                     <content>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <bottom>
+                              <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                           </bottom>
+                           <center>
+                              <TableView fx:id="e_table" prefHeight="680.0" prefWidth="819.0" BorderPane.alignment="CENTER">
+                                 <columns>
+                                    <TableColumn fx:id="e_id_col" prefWidth="50.0" text="ID" />
+                                    <TableColumn fx:id="e_fname_col" prefWidth="123.0" text="First Name" />
+                                    <TableColumn fx:id="e_lname_col" prefWidth="92.0" text="Last Name" />
+                                    <TableColumn fx:id="e_team_col" prefWidth="88.0" text="Department" />
+                                    <TableColumn fx:id="e_user_col" prefWidth="153.0" text="Username" />
+                                    <TableColumn fx:id="e_cont_col" prefWidth="191.0" text="Contact" />
+                                    <TableColumn fx:id="e_sal_col" prefWidth="97.0" text="Salary" />
+                                 </columns>
+                              </TableView>
+                           </center>
+                           <right>
+                              <BorderPane prefHeight="680.0" prefWidth="295.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <TabPane prefHeight="315.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                       <tabs>
+                                          <Tab text="Add New">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="277.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TextField fx:id="e_addfname" layoutX="55.0" layoutY="94.0" prefHeight="25.0" prefWidth="199.0" promptText="First Name" />
+                                                      <Label layoutX="130.0" layoutY="26.0" prefHeight="35.0" prefWidth="47.0" text="Add">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button fx:id="e_addbtn" layoutX="51.0" layoutY="499.0" mnemonicParsing="false" onAction="#CreateEmployee" prefHeight="25.0" prefWidth="193.0" text="Create" />
+                                                      <TextField fx:id="e_addlname" layoutX="54.0" layoutY="128.0" prefHeight="25.0" prefWidth="199.0" promptText="Last Name" />
+                                                      <ComboBox fx:id="e_addteam" layoutX="54.0" layoutY="167.0" prefHeight="25.0" prefWidth="197.0" promptText="Department" />
+                                                      <TextField fx:id="e_addsal" layoutX="55.0" layoutY="350.0" prefHeight="25.0" prefWidth="199.0" promptText="Salary" />
+                                                      <TextField fx:id="e_adduser" layoutX="55.0" layoutY="221.0" prefHeight="25.0" prefWidth="199.0" promptText="Username" />
+                                                      <TextField fx:id="e_addpass" layoutX="55.0" layoutY="258.0" prefHeight="25.0" prefWidth="199.0" promptText="Password" />
+                                                      <TextField fx:id="e_addcont" layoutX="55.0" layoutY="293.0" prefHeight="25.0" prefWidth="199.0" promptText="Contact" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Modify">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ComboBox fx:id="e_modatt" layoutX="73.0" layoutY="156.0" prefHeight="25.0" prefWidth="180.0" promptText="Attribute" />
+                                                      <Label layoutX="114.0" layoutY="37.0" prefHeight="41.0" prefWidth="78.0" text="Modify">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="e_modid" layoutX="74.0" layoutY="114.0" prefHeight="25.0" prefWidth="177.0" promptText="Enter ID" />
+                                                      <TextArea fx:id="e_modchanges" layoutX="74.0" layoutY="202.0" prefHeight="97.0" prefWidth="182.0" promptText="Enter Changes" />
+                                                      <Button fx:id="e_modbtn" layoutX="201.0" layoutY="332.0" mnemonicParsing="false" onAction="#UpdateEmployee" text="Modify" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Delete Service">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TextField fx:id="e_delide" layoutX="73.0" layoutY="132.0" promptText="ID" />
+                                                      <Label layoutX="109.0" layoutY="44.0" prefHeight="41.0" prefWidth="78.0" text="Delete">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button fx:id="e_delbtn" layoutX="122.0" layoutY="208.0" mnemonicParsing="false" onAction="#DeleteEmployee" text="Delete" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                       </tabs>
+                                    </TabPane>
+                                 </center>
+                              </BorderPane>
+                           </right>
+                        </BorderPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Inventory">
+                     <content>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <bottom>
+                              <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                           </bottom>
+                           <center>
+                              <TableView fx:id="i_table" prefHeight="680.0" prefWidth="819.0" BorderPane.alignment="CENTER">
+                                 <columns>
+                                    <TableColumn fx:id="i_num_col" prefWidth="136.0" text="Listing Number" />
+                                    <TableColumn fx:id="i_name_col" prefWidth="125.0" text="Item Name" />
+                                    <TableColumn fx:id="i_cur_col" prefWidth="184.0" text="Current Supply" />
+                                    <TableColumn fx:id="i_rec_col" prefWidth="197.0" text="Recommended Supply" />
+                                    <TableColumn fx:id="i_loc_col" prefWidth="152.0" text="Location" />
+                                 </columns>
+                              </TableView>
+                           </center>
+                           <right>
+                              <BorderPane prefHeight="680.0" prefWidth="295.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <TabPane prefHeight="315.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                      <tabs>
+                                        <Tab text="Add Listing">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="277.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label layoutX="105.0" layoutY="42.0" prefHeight="41.0" prefWidth="49.0" text="Add">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="i_addname" layoutX="55.0" layoutY="101.0" promptText="Item Name" />
+                                                      <TextField fx:id="i_addcur" layoutX="55.0" layoutY="139.0" promptText="Current Supply" />
+                                                      <TextField fx:id="i_addrec" layoutX="55.0" layoutY="182.0" promptText="Recommended Supply" />
+                                                      <TextField fx:id="i_addloc" layoutX="55.0" layoutY="222.0" promptText="Location" />
+                                                      <Button fx:id="i_addbtn" layoutX="166.0" layoutY="280.0" mnemonicParsing="false" onAction="#CreateInventory" text="Add" />
+                                                   </children></AnchorPane>
+                                          </content>
+                                        </Tab>
+                                        <Tab text="Delete">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TextField fx:id="i_delid" layoutX="73.0" layoutY="123.0" promptText="Enter Listing ID" />
+                                                      <Label layoutX="109.0" layoutY="51.0" prefHeight="41.0" prefWidth="78.0" text="Delete">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button fx:id="i_delbtm" layoutX="122.0" layoutY="170.0" mnemonicParsing="false" onAction="#DeleteInventory" text="Delete" />
+                                                   </children></AnchorPane>
+                                          </content>
+                                        </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                 </center>
+                              </BorderPane>
+                           </right>
+                        </BorderPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+         <top>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button fx:id="backbtn" mnemonicParsing="false" onAction="#BackToHomepage" text="Back" />
+              </items>
+            </ToolBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

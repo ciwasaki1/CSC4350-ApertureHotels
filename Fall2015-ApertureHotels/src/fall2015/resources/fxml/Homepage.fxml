@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="456.0" prefWidth="414.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fall2015.aperturehotels.HomepageController">
+   <children>
+      <BorderPane prefHeight="456.0" prefWidth="438.0">
+         <top>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: rgba(33,33, 33);" BorderPane.alignment="CENTER">
+              <items>
+                  <Region prefHeight="30.0" prefWidth="222.0" />
+                  <Label fx:id="username_label" style="-fx-text-fill: white;" />
+                  <Hyperlink fx:id="hyperlog" onAction="#BackToLogIn" prefHeight="23.0" prefWidth="53.0" style="-fx-text-fill: rgba(48, 132, 217);" text="Log Out" />
+              </items>
+            </ToolBar>
+         </top>
+         <center>
+            <AnchorPane prefHeight="350.0" prefWidth="438.0" style="-fx-background-color: rgba(33,33, 33);">
+               <children>
+                  <Label layoutX="96.0" layoutY="31.0" style="-fx-text-fill: white;" text="Aperture Home">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="mybtn" layoutX="108.0" layoutY="123.0" mnemonicParsing="false" onAction="#ToMyAperture" prefHeight="20.0" prefWidth="222.0" style="-fx-background-color: rgba(48, 132, 217); -fx-text-fill: white;" text="MyAperture" />
+                  <Button fx:id="ticketbtn" layoutX="108.0" layoutY="161.0" mnemonicParsing="false" onAction="#ToTickets" prefHeight="20.0" prefWidth="222.0" style="-fx-background-color: rgba(48, 132, 217); -fx-text-fill: white;" text="Tickets" />
+                  <Button fx:id="RMbtn" layoutX="108.0" layoutY="197.0" mnemonicParsing="false" onAction="#ToRoomManagement" prefHeight="20.0" prefWidth="222.0" style="-fx-background-color: rgba(48, 132, 217); -fx-text-fill: white;" text="Room Management" />
+                  <Button fx:id="invbtn" layoutX="108.0" layoutY="232.0" mnemonicParsing="false" onAction="#ToInventory" prefHeight="20.0" prefWidth="222.0" style="-fx-background-color: rgba(48, 132, 217); -fx-text-fill: white;" text="Inventory" />
+                  <Button layoutX="108.0" layoutY="267.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="222.0" style="-fx-background-color: rgba(48, 132, 217); -fx-text-fill: white;" text="Revenue" />
+                  <Button fx:id="SMbtn" layoutX="108.0" layoutY="303.0" mnemonicParsing="false" onAction="#ToStaffManagement" prefHeight="20.0" prefWidth="222.0" style="-fx-background-color: rgba(48, 132, 217); -fx-text-fill: white;" text="Staff Management" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
