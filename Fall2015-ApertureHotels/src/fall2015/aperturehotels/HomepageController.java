@@ -16,11 +16,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 /**
@@ -69,6 +72,7 @@ public class HomepageController implements Initializable {
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.show();
     }
     @FXML
@@ -81,18 +85,20 @@ public class HomepageController implements Initializable {
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.show();
     }
     @FXML
     private void ToTickets(ActionEvent event) throws IOException {
         Stage stage; 
         Parent root;
-
+        
         stage=(Stage) ticketbtn.getScene().getWindow();
         root = FXMLLoader.load(getClass().getResource("/fall2015/resources/fxml/Tickets.fxml"));
-
+        
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.show();
     }
     @FXML
@@ -105,6 +111,7 @@ public class HomepageController implements Initializable {
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.show();
     }
     @FXML
@@ -117,6 +124,7 @@ public class HomepageController implements Initializable {
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.show();
     }
     public String getTeam(String sql)

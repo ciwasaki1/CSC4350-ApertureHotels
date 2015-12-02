@@ -56,6 +56,7 @@ public class MyApertureController implements Initializable {
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.show();
     }
     public void OpenClockIn(ActionEvent event) throws IOException {
@@ -78,6 +79,6 @@ public class MyApertureController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-    }    
+    }
     
 }

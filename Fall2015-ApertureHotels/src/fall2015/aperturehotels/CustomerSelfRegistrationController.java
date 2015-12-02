@@ -40,6 +40,7 @@ public class CustomerSelfRegistrationController implements Initializable {
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.show();
     }
     @FXML
@@ -52,6 +53,7 @@ public class CustomerSelfRegistrationController implements Initializable {
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.show();
     }
     @Override
