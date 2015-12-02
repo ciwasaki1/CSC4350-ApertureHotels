@@ -9,7 +9,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
+import javafx.stage.*;
 
 /**
  *
@@ -20,7 +20,7 @@ public class Fall2015ApertureHotels extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/fall2015/resources/fxml/LogInScreen.fxml"));
-        
+        //stage.initStyle(StageStyle.UNDECORATED);
         Scene scene = new Scene(root);
         
         stage.setScene(scene);

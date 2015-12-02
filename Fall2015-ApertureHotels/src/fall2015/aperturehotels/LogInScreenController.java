@@ -88,7 +88,31 @@ public class LogInScreenController implements Initializable {
         }
         
     }
-
+    public void onEnter() throws IOException{
+        String acc_name;
+        Stage stage; 
+        Parent root;
+  
+        stage=(Stage) btn1.getScene().getWindow();
+        
+        if(isValidCredentials())
+        {
+            AccountContext.getInstance().currentCountry().setCurrentAccount(username_field.getText());
+            acc_name = AccountContext.getInstance().currentCountry().getCurrentAccount();
+            System.out.println(acc_name);
+            
+            root = FXMLLoader.load(getClass().getResource("/fall2015/resources/fxml/Homepage.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.centerOnScreen();
+            stage.show();
+        }
+        else
+        {
+            password_field.clear();
+            message_label.setText("ID and Password Combination is incorrect!");
+        }
+    }
     
     private boolean isValidCredentials()
     {
@@ -125,7 +149,6 @@ public class LogInScreenController implements Initializable {
             return let_in; 
 
     }
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }

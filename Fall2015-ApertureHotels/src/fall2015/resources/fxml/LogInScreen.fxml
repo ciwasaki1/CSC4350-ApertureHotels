@@ -10,8 +10,8 @@
 
 <AnchorPane id="AnchorPane" prefHeight="487.0" prefWidth="408.0" style="-fx-background-color: rgba(33, 33, 33);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fall2015.aperturehotels.LogInScreenController">
     <children>
-      <TextField fx:id="username_field" layoutX="177.0" layoutY="274.0" prefHeight="31.0" prefWidth="144.0" />
-      <PasswordField fx:id="password_field" layoutX="177.0" layoutY="307.0" prefHeight="31.0" prefWidth="144.0" />
+      <TextField fx:id="username_field" layoutX="177.0" layoutY="274.0" onAction="#onEnter" prefHeight="31.0" prefWidth="144.0" />
+      <PasswordField fx:id="password_field" layoutX="177.0" layoutY="307.0" onAction="#onEnter" prefHeight="31.0" prefWidth="144.0" />
         <Button fx:id="btn1" layoutX="177.0" layoutY="340.0" onAction="#ToHome" prefHeight="31.0" prefWidth="144.0" style="-fx-background-color: rgba(48, 132, 217); -fx-text-fill: white;" text="Submit" />
       <Label layoutX="139.0" layoutY="210.0" prefHeight="34.0" prefWidth="135.0" style="-fx-text-fill: white;" text="Employee Login">
          <font>

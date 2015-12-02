@@ -21,7 +21,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Hyperlink fx:id="hyperlogin" layoutX="32.0" layoutY="552.0" onAction="#BackToLogIn" prefHeight="23.0" prefWidth="102.0" style="-fx-text-fill: rgba(48, 132, 217);" text="Employee Log In" />
+      <Hyperlink fx:id="hyperlogin" layoutX="32.0" layoutY="552.0" onAction="#BackToLogIn" prefHeight="29.0" prefWidth="126.0" style="-fx-text-fill: rgba(48, 132, 217);" text="Employee Log In" />
       <ImageView fitHeight="218.0" fitWidth="270.0" layoutX="126.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/Portal_Cake_icon.png" />
