@@ -56,6 +56,7 @@ public class LogInScreenController implements Initializable {
         root = FXMLLoader.load(getClass().getResource("/fall2015/resources/fxml/CustomerSelfRegistration.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.show(); 
 
         
@@ -77,6 +78,7 @@ public class LogInScreenController implements Initializable {
             root = FXMLLoader.load(getClass().getResource("/fall2015/resources/fxml/Homepage.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
+            stage.centerOnScreen();
             stage.show();
         }
         else

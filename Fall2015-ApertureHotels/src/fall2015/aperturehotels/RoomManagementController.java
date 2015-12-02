@@ -89,6 +89,7 @@ public class RoomManagementController implements Initializable {
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.show();
     }
     private void PopulateRoomTable(String sql)
